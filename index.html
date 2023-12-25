@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DOM</title>
+    <style>
+        .container{
+            border: 2px solid black;
+        }
+        .container,h1{
+            border: 1px solid black;
+            text-align: center;
+            border-radius: 10px;
+        }
+        #btn{
+            padding: 10px 20px;
+            border: 2px solid black;
+            border-radius: 9px;
+            font-weight: bold;
+            color: white;
+            background: orange;
+            cursor: pointer;
+            margin: 10px 200px 0px 40vw;
+        }
+        #btn:hover{
+            transition: .5s;
+            background: lightgreen;
+        }
+        .bdiv{
+            
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <h1>This is Paragraph</h1>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. At expedita illo omnis ipsa quibusdam molestiae ad cupiditate placeat reprehenderit consequatur unde accusantium aliquam repellat perferendis, odio optio deleniti eius dicta iste? Voluptatem odio fugiat minima, in quos dignissimos beatae quis consequatur? Vitae cumque saepe pariatur ea eius ex, qui consequatur illum laudantium consequuntur error, iusto doloribus. Ratione, modi vero voluptates ullam amet quis similique earum ab quaerat quidem, libero sed voluptas quo officiis alias necessitatibus! Doloribus ducimus aliquam est exercitationem inventore odio unde esse explicabo quisquam officiis dolore voluptate perferendis, perspiciatis fugit ab ut eveniet excepturi magnam illo quaerat? Minima odit explicabo at optio eligendi quisquam provident dicta illo, excepturi ut quam vitae totam temporibus deserunt fugit tempore debitis ad cumque, esse consequatur id, laudantium suscipit quo. Voluptatum, nihil laborum dolorum totam tempora numquam quisquam sunt? Delectus odio exercitationem saepe. Quas cum quam ea et accusantium quis voluptate vitae dolore ut possimus cupiditate, dicta quaerat aliquid? Recusandae possimus tempora est maxime rerum nulla accusantium cum, voluptatibus magnam deleniti. Dicta voluptatem, quisquam quam nulla illum eligendi. Iure omnis commodi deleniti culpa distinctio accusamus veritatis rerum, sunt corporis! Laudantium natus repudiandae, soluta, neque velit nesciunt eligendi corporis cumque voluptatem rem dolor ratione.</p>
+  </div>
+  
+  <button class="bdiv" id="btn" onclick="toggleHide()">SHOW / HIDE</button> 
+ <script>
+ function toggleHide(){
+   
+   let para = document.getElementById('para');
+   if (para.style.display != 'none'){
+   para.style.display = 'none';
+   }
+   else{
+       para.style.display = 'block';
+   }
+}
+
+let btn = document.getElementById('btn');
+btn.addEventListener('mouseover',function run(){
+   console.log('Are you Sure ')
+})
+btn.addEventListener('mouseout',function run(){
+   console.log('mouse Out')
+});
+
+</script>
+</body>
+</html>
